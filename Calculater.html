@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmatical function</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        /* body{ */
+            /* background-image:url(image1.jpeg); */
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+        /* } */
+        header{
+            background-color: blanchedalmond;
+            color: black;
+            text-align: center;
+        }
+        .Container{
+            margin: 140px auto;
+            width: 50%;
+            height: 230px;
+        }
+        /* .FirstNum input{ */
+            /* margin: 10px 200px; */
+            /* text-align: center; */
+            /* padding: 3px 40px; */
+            /* font-size: medium; */
+            /* font-weight: bolder; */
+        /* } */
+        hr{
+            border: 2px solid white;  
+        }
+        .button{
+            margin: 10px 20px;
+        }
+        .operations{
+            margin:20px 9px;
+            padding: 5px 20px;
+            background-color: rgb(96,51,11);
+            /* font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; */
+            color: white;
+        }
+        .operations:hover{
+            background-color: white;
+            color:black;
+            border-radius: 15px;
+        }
+    </style>
+        <script type="text/javascript">
+            function Add()
+            {
+                var first;
+                var second;
+                var result;
+                first=parseInt(Calculator.First.value);
+                second=parseInt(Calculator.Second.value);
+                result=first+second;
+                Calculator.ShowResult.value=result;
+                return result;
+            }
+            function Sub()
+            {
+                var first;
+                var second;
+                var result;
+                first=parseInt(Calculator.First.value);
+                second=parseInt(Calculator.Second.value);
+                result=first-second;
+                Calculator.ShowResult.value=result;
+                return result;
+            }
+            function Multi()
+            {
+                var first;
+                var second;
+                var result;
+                first=parseInt(Calculator.First.value);
+                second=parseInt(Calculator.Second.value);
+                result=first*second;
+                Calculator.ShowResult.value=result;
+                return result;
+            }
+            function Div()
+            {
+                var first;
+                var second;
+                var result;
+                first=parseInt(Calculator.First.value);
+                second=parseInt(Calculator.Second.value);
+                result=first/second;
+                Calculator.ShowResult.value=result;
+                return result;
+            
+            }
+
+            function Clear()
+            {
+                Calculator.First.value="";
+                Calculator.Second.value="";
+                Calculator.ShowResult.value="";
+                document.getElementById("FirstNumber").focus();  
+            }
+
+    </script>
+</head>
+<body>
+    <header>
+        <h2>Arithmatic Operation</h2>
+    </header>
+    <div class="Container">
+        <form name="Calculator">
+            <div class="FirstNum">
+                <input type="text" name="First" placeolder="Enter First numbar" id="FirstNumber" autofocus/>
+            </div>
+            <div class="FirstNum">
+                <input type="text" name="Seconnd" placeholdder="Enter Second Number"/>
+            </div>
+            <div class="Result FirstNum">
+                <input type="text" name="ShowResult" placeholder="Show Result Here" onkeydown="return false"/>
+            </div>
+            <hr/>
+            <div class="button">
+              <button class="operations" type="button" onclick="Clear()">Clear</button>
+              <button class="operations" type="button" onclick="Add()">Addition</button>
+              <button class="operations" type="button" onclick="Sub()">Substraction</button>
+              <button class="operations" type="button" onclick="Multi()">Multiplication</button>
+              <button class="operations" type="button" onclick="Div()">Division</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
